@@ -1,0 +1,44 @@
+# TIER 1 - HIGH PRIORITY TARGETS
+# These assets have the most testing potential and highest reward opportunities
+
+www.clearme.com
+clearme.com
+my.clearme.com
+verified.clearme.com/v1/verification_sessions
+web-edge.clearme.com
+authentication.clearme.com
+enroll.clearme.com
+concierge.clearme.com
+
+# TIER 2 - MEDIUM PRIORITY TARGETS
+mobile.clearme.com
+identity.clearme.com
+scan.clearme.com
+
+# TIER 3 - LOWER PRIORITY TARGETS
+ir.clearme.com
+com.clearme.clearapp
+com.clearme.Clear
+
+# PRIMARY URLs FOR MANUAL TESTING
+https://www.clearme.com
+https://my.clearme.com
+https://verified.clearme.com
+https://authentication.clearme.com
+https://enroll.clearme.com
+https://concierge.clearme.com
+
+# API ENDPOINTS TO TEST
+https://verified.clearme.com/v1/verification_sessions
+https://verified.clearme.com/v1/api/health
+https://verified.clearme.com/v1/api/users
+
+# COOKIES & SESSIONS TO MONITOR
+- FIND_ME (Cookie)
+- JSESSIONID (Session)
+- csrf_token (Form submissions)
+
+# HEADERS TO CHECK FOR
+- X-Bug-Bounty
+- Set-Cookie headers
+- Authorization / Bearer tokens

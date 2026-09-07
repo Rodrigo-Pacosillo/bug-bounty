@@ -7,6 +7,9 @@
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
   "secrets": { "LLM_API_KEY": {} },
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:/home/vscode/.opencode/bin"
+  },
   "forwardPorts": [8080],
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "customizations": {

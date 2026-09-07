@@ -1,0 +1,37 @@
+# OUT OF SCOPE - NEVER REPORT THESE
+
+## Critical Exclusions (HackerOne Core)
+- Scanner-generated reports (Retire.js, Vega, Nessus, OpenVAS, Prowler, Qualys)
+- Self-XSS that cannot be exploited on other users
+- Known vulnerable libraries without working POC
+- Attacks on X-Bug-Bounty header or FIND_ME cookie
+- Email or user enumeration
+- Missing autocomplete attributes for forms
+
+## Program-Specific Exclusions
+- Social engineering (phishing, vishing, smishing)
+- Physical access attacks
+- EOL browsers or platforms (Internet Explorer, etc.)
+- Google Maps API key exposure (already known)
+- Prismic Access Tokens (read-only, public, intended)
+- Wayback Machine findings without current exploitation proof
+- Vulnerabilities affecting EOL browsers
+
+## Ineligible Assets
+- legal.clearme.com (None severity)
+- hub.clearme.com (None severity)
+- fieldsupport.clearme.com (None severity)
+- docs.clearme.com (None severity)
+- clearme.atlassian.net (External platform - report to Atlassian)
+- Physical devices (airports, stadiums, etc.)
+
+## Testing Restrictions
+- Do not brute force rate-limited APIs
+- Do not mass create accounts (max ~12 accounts recommended)
+- No damage/disruption to systems
+- Only test accounts you own or with written permission
+- First reporter wins on duplicates
+
+## Additional Resources
+- HackerOne Core Ineligible: https://docs.hackerone.com/en/articles/8494488-core-ineligible-findings
+- CLEAR Scope: https://hackerone.com/clear/scope

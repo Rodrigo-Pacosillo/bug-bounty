@@ -9,18 +9,20 @@ GO_TOOLS=(
   github.com/projectdiscovery/katana/cmd/katana@latest
   github.com/projectdiscovery/dnsx/cmd/dnsx@latest
   github.com/projectdiscovery/naabu/cmd/naabu@latest
-  github.com/projectdiscovery/interactsh/v2/cmd/interactsh-client@latest
+  github.com/projectdiscovery/interactsh/cmd/interactsh-client@latest
   github.com/projectdiscovery/notify/cmd/notify@latest
   github.com/ffuf/ffuf/v2@latest
   github.com/tomnomnom/gf@latest
   github.com/tomnomnom/qsreplace@latest
   github.com/tomnomnom/assetfinder@latest
-  github.com/hahwull/dalfox/v2@latest
+  github.com/hahwul/dalfox/v2@latest
   github.com/lc/gau/v2/cmd/gau@latest
   github.com/BishopFox/jsluice/cmd/jsluice@latest
-  github.com/gitleaks/gitleaks/v8@latest
+  github.com/zricethezav/gitleaks/v8@latest
 )
-go install -v "${GO_TOOLS[@]}"
+for tool in "${GO_TOOLS[@]}"; do
+  go install -v "$tool"
+done
 
 # Python tools (mitmproxy = tu "Burp" headless dentro del codespace)
 pip install --user waymore uro arjun mitmproxy
@@ -40,4 +42,7 @@ done
 # Templates y opencode
 nuclei -update-templates
 curl -fsSL https://opencode.ai/install | bash
+export PATH="$HOME/.opencode/bin:$PATH"
+command -v opencode >/dev/null
+opencode --version
 echo "✅ workspace listo — corre 'opencode' para empezar"

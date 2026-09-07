@@ -1,0 +1,486 @@
+Skip to main content  >
+Hackerone logo
+pastoseco
+Hai
+Security page
+Program guidelines
+Scope
+Hacktivity
+Thanks
+Updates
+Collaborators
+Introduction
+Any web traffic sent to CLEAR assets as part of testing must contain the following header: “X-Bug-Bounty: HackerOne-<username>”.
+⚠️ Warning: If the proper header above was not used during testing, reward amount may be impacted and, in the case of repeat failures, forfeited.
+Username should be your HackerOne username. See the “Public Website” section below for a way to conveniently set these headers while testing the public website.
+Program highlights
+Platform StandardsFully compliant with Platform Standards. 
+Top Response EfficiencyThis program's response efficiency is above 90%. 
+12 hours
+Average time to first response
+4 days, 3 hours
+Average time to triage
+2 weeks, 5 days
+Average time to bounty
+3 weeks, 2 days
+Average time from submission to bounty
+N/A
+Average time to resolution
+Rewards summary
+Last updated on November 5, 2025. View changes
+Each severity lists the 90-day average bounty and the percentage of total resolved reports, if applicable.
+
+Avg. bounty n/a48.94% submissions
+
+Avg. bounty $1,00027.66% submissions
+
+Avg. bounty n/a17.02% submissions
+
+Avg. bounty n/a6.38% submissions
+$1 – $500
+$500 – $1,000
+$1,000 – $3,500
+$3,500 – $15,000
+CLEAR, at its discretion, may provide rewards to vulnerability reporters. Our rewards are based on severity per CVSS (the Common Vulnerability Scoring Standard) and risk (defined as a vector of impact and likelihood) to CLEAR and its members. Please note these are general guidelines, and those reward decisions are up to the discretion of CLEAR. Reward amounts may vary depending upon the severity of the vulnerability reported and the quality of the report. If we receive multiple reports for the same finding the reward will go to the first reporter. Keep in mind that this is not a contest, nor a competition.
+Scope exclusions
+Core Ineligible Findings are out of scope. Learn more 
+Category
+Exclusion details
+Self-XSS
+Self-XSS that cannot be used to exploit other users will not be eligible for bounty.
+Off The Self Scanner Reports
+Reports or findings from Open-Source COTS tools or scanners (such as Retire.js, Vega, Nessus, OpenVAS, Prowler, Qualys, etc.) are not eligible for bounty.
+Attacks based on social engineering, phishing, or physical access.
+Attacks based on these methods may not be eligible for bounty.
+EOL Browser/Platform Impact
+Issues/vulnerabilities affecting users of EOL browsers or platforms may not be eligible for acceptance or bounty
+Google Maps API keys Exposure
+CLEAR is aware of the publicly exposed paid API key for the Google Maps API and has employed compensating controls. Reporting this exposed key is not eligible for bounty.
+HackerOne Core Ineligible Findings
+Anything listed under [HackerOne Core Ineligible Findings].(https://docs.hackerone.com/en/articles/8494488-core-ineligible-findings)
+Known Vulnerable Libraries without a POC
+Previously known vulnerable libraries without a working proof of concept.
+X-Bug-Bounty Header/Cookie
+Any attacks on the “X-Bug-Bounty” header or the “FIND ME” cookie.
+Email or User Enum
+Email or user enumeration
+Autocomplete attributes
+Missing autocomplete attributes for forms
+Exploitable without a working Proof of Concept
+Reports stating that software is out of date/vulnerable without an exploitable proof of concept (e.g. referencing vulnerabilities from past versions without demonstrating their relevance).
+Prismic Access Token
+Prismic is meant for public consumption and the tokens have read-only access which is intended
+Archived Content / Wayback Machine Findings
+Reports which rely on historical exposure (e.g. e.g., the Internet Archive / Wayback Machine) without proof that the issue is presently accessible, exploitable, or poses a realistic security risk will not be accepted
+Overview
+Last updated on March 2, 2026. View changes
+About Us
+CLEAR's mission is to strengthen security and create frictionless experiences. With over 36 million Members and a growing network of partners across the world, CLEAR's secure identity platform is transforming the way people live, work, and travel. Whether you are traveling, at the stadium, or on your phone, CLEAR connects you to the things that make you, you—making everyday experiences easier, more secure, and friction-free. CLEAR is committed to privacy done right. Members are always in control of their own information, and we do not sell biometric or sensitive personal data.
+CLEAR is committed to maintaining robust security throughout our entire enterprise. We are committed to our members and to the security of their data. In the spirit of continual improvement, we welcome the contributions of external security researchers. We anticipate awarding them for their contributions as they bolster the security for CLEAR and, ultimately, our members.
+CLEAR1 is CLEAR's secure identity platform for businesses, offering multi-layered verification at critical touchpoints. By analyzing hundreds of real-time signals across biometrics, documents, and devices – and validating them against issuing, authoritative, and trusted data sources – CLEAR1 ensures users are who they claim to be. Implementation is seamless, with low-code and out-of-the-box integrations that fit into your existing tech stack.
+Over 36 million users in CLEAR’s network can verify instantly with just a selfie, while new users enjoy the same experience across all partners after a quick, one-time setup. Backed by over 15 years in highly-regulated environments, CLEAR1 delivers trust, wherever identity matters.
+Program Summary
+As a researcher, we understand your eagerness to start testing immediately. However, we strongly recommend that you read the full program terms. Here is a brief overview:
+
+    Submit a well-written report following the submission guidelines.
+    Do not cause any damage or disruption to our systems or services.
+    Rewards are based on the demonstrated impact of the vulnerability, not solely on CVSS scores.
+
+Response Targets
+CLEAR will make a best effort to meet the following response targets for hackers participating in our program:
+
+    Time to first response (from report submit) - 2 business days
+    Time to triage (from report submit) - 2 business days
+    Time to bounty (from triage) - 5 business days
+
+We’ll try to keep you informed about our progress throughout the process.
+Disclosure Policy
+By providing a submission or agreeing to the Program Terms, You agree that you may not publicly disclose your findings or the contents of your Submission to any third parties in any way without CLEAR's prior written approval.
+Failure to comply with the Program Terms will result in immediate disqualification from the Bug Bounty Program and ineligibility for receiving any Bounty Payments.
+
+    Follow HackerOne's disclosure guidelines.
+
+CLEAR Membership/Accounts & Testing
+CLEAR1 has a web+mobile member experience for an individual wishing to verify their identity and share information with a partner. CLEAR1 also has a Web+API partner experience for our business partners to view verification info, change project settings, and manage their integrations. You can always verify with CLEAR1 free online from the comfort of your own home; there is no need to go to an airport or appear anywhere else in person.
+How to access data in CLEAR1
+Administrators for our partner organizations log in with their credentials at https://verified.clearme.com/dashboard. It supports both standard user login and SSO-based logins. CLEAR is not providing credentials into the H1 testing organization at this time.
+Additionally, there is an API which CLEAR1 customers (businesses) use to retrieve personal information or create new verification sessions. That API is documented here. CLEAR is not providing an API key at this time.
+Program Rules
+
+    Any web traffic sent to CLEAR assets as part of testing must contain the following header: “X-Bug-Bounty: HackerOne-<username>”. Username should be your HackerOne username. See the “Public Website” section below for a way to conveniently set these headers while testing the public website.
+    Any CLEAR accounts that you create solely for testing with this program must follow the enrollment instructions above (see "How to Enroll in CLEAR"). This usually entails setting the appropriate lead source during enrollment, which can be done automatically for you by enrolling through the links provided. The testing instructions below mention more about this.
+    Please provide detailed reports with reproducible steps. If the report is not detailed enough to reproduce the issue, the issue will not be eligible for a reward.
+    Submit one vulnerability per-report, unless you need to chain vulnerabilities to provide impact.
+    When duplicates occur, we only award the first report that was received (provided that it can be fully reproduced).
+    Multiple vulnerabilities caused by one underlying issue will be awarded one bounty.
+    Social engineering (e.g. phishing, vishing, smishing) is prohibited.
+    Make a good faith effort to avoid privacy violations, destruction of data, and interruption or degradation of our service.
+    Only interact with accounts you own or with the explicit, written permission of the account holder.
+    Do not mass create accounts to perform testing. For example, creating over a dozen accounts is most likely unnecessary. If you see a potential valid attack that requires more accounts please reach out to us.
+    Do not perform brute force testing to determine whether rate limiting is in place for particular APIs or pieces of functionality.
+
+Public Website (www.clearme.com & web-edge.clearme.com) Testing
+Before testing the public website visit the following URL with your HackerOne username filled in: https://www.clearme.com/?bug-bounty-program=HackerOne&bug-bounty-username=\<your-username>. This will ensure that the required “X-Bug-Bounty” header is sent with all browser requests to CLEAR assets and that the lead source is set to “hackerone-web” during an account enrollment. After visiting the pre-testing URL above, your browser should remain configured for testing for one week. So you will just have to visit this URL once per week if the site data for www.clearme.com is not cleared/modified and remains intact.
+Mobile App (flagship, iOS & Android) Testing and Installation
+You MUST install the apps from this specific link so that the app is set up correctly on your device: https://clear.app.link/hackerone-mobile.
+This installation will automatically set the lead source to “hackerone-mobile” for you during any new account enrollments. But it does not automatically set the X-Bug-Bounty header for you when hitting mobile.clearme.com, so at this time you must set the header manually when testing.
+Rewards
+CLEAR, at its discretion, may provide rewards to vulnerability reporters. Our rewards are based on severity per CVSS (the Common Vulnerability Scoring Standard) and risk (defined as a vector of impact and likelihood) to CLEAR and its members. Please note these are general guidelines, and those reward decisions are up to the discretion of CLEAR. Reward amounts may vary depending upon the severity of the vulnerability reported and the quality of the report. If we receive multiple reports for the same finding the reward will go to the first reporter. Keep in mind that this is not a contest, nor a competition.
+In Scope Assets
+See the Structured Scope Section for each individual asset in and out of scope.
+Vulnerabilities reported on other CLEAR properties or applications are currently ineligible for rewards (as other sites and systems come into scope, they will be added to this section).
+Out of Scope Items
+Among our in-scope assets, there are some vulnerabilities and functionalities/features that are out of scope. These are defined in this section among the core ineligible findings: https://docs.hackerone.com/en/articles/8494488-core-ineligible-findings
+Out of Scope Vulnerabilities
+When reporting vulnerabilities, please consider:  
+
+    Attack scenario/exploitability
+    The security impact of the bug
+
+Out of Scope Assets
+ This program is also NOT scoped to any physical devices (e.g., at airports, sports locations, etc.) that are in any way associated with or owned by CLEAR. Any vulnerabilities or bounties submitted that include this domain or these devices will not be considered and may lead to disqualification from the program.
+Responsible Disclosure and Eligibility
+To promote the discovery and reporting of vulnerabilities, as well as increasing the security of our data, we ask that you:
+
+    Please remember we welcome your submissions but require your discretion. Please do not publicly disclose any vulnerabilities without our prior consent.
+    You must follow all rules as described in “Program Rules” section above
+    Public disclosure will uniformly result in disqualification.
+    Refrain from accessing or modifying user data.
+    If you have found a vulnerability affecting our underlying software, please notify us.
+    Share the security issue with us in detail.
+    You are responsible for complying with any applicable laws, and you should only use your own accounts or test accounts for reporting vulnerabilities.
+    We only reward the first reporter of a vulnerability.
+    You must report a qualifying vulnerability through the HackerOne reporting tool to be eligible for a monetary reward.
+
+Qualifying Vulnerabilities
+Any design or implementation issue that is reproducible and/or substantially affects the security of CLEAR and/or its members is likely to be in scope for the program. Common examples include, but are not limited to:
+
+    Cross Site Scripting (XSS)
+    Cross Site Request Forgery (CSRF)
+    Remote Code Execution (RCE)
+    SQL Injection (SQLi)
+    Authentication bypass
+    Server Side Request Forgery (SSRF)
+    Privilege Escalation
+
+Safe Harbor
+Any activities conducted in a manner consistent with this policy will be considered authorized conduct and we will not initiate legal action against you. If legal action is initiated by a third party against you in connection with activities conducted under this policy, we will take steps to make it known that your actions were conducted in compliance with this policy. 
+The Fine Print
+Flaws must be verifiable and reproducible.
+You must comply with all applicable laws in connection with your participation in this program. You are also responsible for any applicable taxes associated with any reward you receive.
+Legal
+
+    If you’re on a sanctions list or live in a country that’s on a sanctions list, we cannot give you a reward. Keep in mind that your citizenship and residency may affect whether you owe taxes on any reward you receive, and you alone are responsible for paying those taxes.
+    We may modify the terms of this program or terminate this program at any time. We won’t apply any changes we make to these program terms retroactively.
+    By accessing CLEAR systems, you agree to CLEAR's Terms of Use and Privacy Policy.
+    Please note: as discussed above, your discretion is paramount. By participating in this program you are agreeing not to disclose any of your findings to third parties.
+
+Thank you for helping to keep CLEAR and our members safe!
+Top hackers
+See all hackers
+1
+dawidczagan
+dawidczagan
+Reputation: 614
+2
+godiego
+godiego
+Reputation: 161
+3
+gerben_javado
+gerben_javado
+Reputation: 154
+4
+schoobydrew
+schoobydrew
+Reputation: 118
+5
+todayisnew
+todayisnew
+Reputation: 116
+6
+mbz0x7
+mbz0x7
+Reputation: 114
+7
+mikkz
+mikkz
+Reputation: 110
+8
+bugschopper
+bugschopper
+Reputation: 103
+9
+0x4d5341
+0x4d5341
+Reputation: 89
+10
+chernobyl
+chernobyl
+Reputation: 87
+11
+stealthy
+stealthy
+Reputation: 79
+12
+shubs
+shubs
+Reputation: 78
+clear
+90%
+© HackerOne
+
+    Opportunities
+    Security
+    Leaderboard
+    Blog
+    Status
+    Docs
+    Support
+    Disclosure Guidelines
+    Press
+    Privacy
+    Terms
+    X
+
+
+Skip to main content  >
+Hackerone logo
+pastoseco
+Hai
+Security page
+Program guidelines
+Scope
+Hacktivity
+Thanks
+Updates
+Collaborators
+Search
+Scope
+All scopes
+Maximum severity
+Any
+Bounty eligibility
+All
+Download Burp Suite Project Configuration File
+Download CSV
+View changes (Last updated on March 2, 2026)
+1-21 of 21
+Asset name
+	Type
+	Coverage
+	Max. severity
+	Bounty
+	Last update
+	Resolved Reports
+www.clearme.com
+Primary Marketing Site
+	Domain		
+Critical
+	
+Eligible
+	
+Jul 16, 2024
+	
+11 (11%)
+web-edge.clearme.com	Domain		
+Critical
+	
+Eligible
+	
+May 20, 2020
+	
+1 (1%)
+verified.clearme.com/v1/verification_sessions
+Public facing API for starting a session in C1.
+	API		
+Critical
+	
+Eligible
+	
+Nov 17, 2025
+	
+0 (0%)
+verified.clearme.com	Domain		
+Critical
+	
+Eligible
+	
+Nov 4, 2025
+	
+0 (0%)
+scan.clearme.com
+Must only referencing physical location parameter "CLR". Attempts to scan or attack other production locations ( Barclays Center, JFK, LAX, Madison Square Garden, SoFi Stadium, etc) is not authorized and may not be eligible for bounty.
+	Domain		
+Critical
+	
+Eligible
+	
+Jan 10, 2025
+	
+0 (0%)
+my.clearme.com
+Clear Member Portal
+	Domain		
+Critical
+	
+Eligible
+	
+Jan 29, 2026
+	
+9 (9%)
+mobile.clearme.com
+This is the backend that supports our flagship iOS and Android apps. Please read the "Mobile App" section under our program's policy to see the best way to test as well as the eligibility requirements for testing. Please install the app via this link.
+	Domain		
+Critical
+	
+Eligible
+	
+Mar 20, 2020
+	
+0 (0%)
+ir.clearme.com
+Public Investor Relations Site
+	Domain		
+Critical
+	
+Eligible
+	
+Nov 14, 2025
+	
+0 (0%)
+identity.clearme.com	Domain		
+Critical
+	
+Eligible
+	
+Jan 28, 2026
+	
+0 (0%)
+http://verified.clearme.com/dashboard	URL		
+Critical
+	
+Eligible
+	
+Jan 28, 2026
+	
+0 (0%)
+enroll.clearme.com	Domain		
+Critical
+	
+Eligible
+	
+Nov 4, 2025
+	
+0 (0%)
+concierge.clearme.com	Domain		
+Critical
+	
+Eligible
+	
+Jan 28, 2026
+	
+0 (0%)
+com.clearme.clearapp
+You must install the app using this link.
+You can sign up for a free CLEAR account for 2 months by using the promo code “HACKER2020”.
+	Android: .apk		
+Critical
+	
+Eligible
+	
+Nov 15, 2025
+	
+4 (4%)
+com.clearme.Clear
+You must install the app using this link.
+You can sign up for a free CLEAR account for 2 months by using the promo code “HACKER2020”. There are also free memberships offered when signing up for a Sports membership.
+	iOS: .ipa		
+Critical
+	
+Eligible
+	
+Mar 23, 2020
+	
+0 (0%)
+clearme.com
+You can sign up for a free CLEAR account for 2 months by using the promo code “HACKER2020”.
+	Domain		
+Critical
+	
+Eligible
+	
+Nov 15, 2025
+	
+27 (27%)
+authentication.clearme.com	Domain		
+Critical
+	
+Eligible
+	
+Nov 4, 2025
+	
+1 (1%)
+clearme.atlassian.net
+Clear Service Support Platform.
+Registration & Login using arbitrary domains is out of scope.
+Please only report misconfigurations that result in vulnerabilities. Any vulnerabilities in the Atlassian Platform itself should be reported to their vulnerability disclosure program. 
+	Domain		
+High
+	
+Eligible
+	
+Jul 16, 2024
+	
+3 (3%)
+legal.clearme.com	Domain		
+None
+	
+Ineligible
+	
+Dec 4, 2024
+	
+0 (0%)
+hub.clearme.com	Domain		
+None
+	
+Ineligible
+	
+Jul 13, 2023
+	
+0 (0%)
+fieldsupport.clearme.com	Domain		
+None
+	
+Ineligible
+	
+Aug 4, 2023
+	
+0 (0%)
+docs.clearme.com	Domain		
+None
+	
+Ineligible
+	
+Dec 30, 2024
+	
+0 (0%)
+1-21 of 21
+clear
+90%
+© HackerOne
+
+    Opportunities
+    Security
+    Leaderboard
+    Blog
+    Status
+    Docs
+    Support
+    Disclosure Guidelines
+    Press
+    Privacy
+    Terms
+    X
+
+este es el objetivo en bug bounty que tengo puedes ayudarme a lograr hacer un planteamiento ideal para lograrlo?
